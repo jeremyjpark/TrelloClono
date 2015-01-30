@@ -16,6 +16,7 @@ TrelloClone.Views.BoardShow = Backbone.CompositeView.extend({
   initialize: function () {
     $('body').css('background-color', 'rgb(35, 113, 159)')
     this.collection = this.model.lists();
+    this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, 'add', this.addList);
   },
 
