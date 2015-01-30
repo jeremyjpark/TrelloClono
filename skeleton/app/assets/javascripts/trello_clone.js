@@ -6,3 +6,7 @@ window.TrelloClone = {
   initialize: function() {
   }
 };
+
+$(document).ready(function(){
+  TrelloClone.initialize();
+});
